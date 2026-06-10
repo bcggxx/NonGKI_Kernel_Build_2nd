@@ -15,8 +15,8 @@ env:
   KERNEL_SOURCE : "https://github.com/bcggxx/n0_kernel_pipa.git"
   KERNEL_BRANCH : "staging"
 
-  CLANG_SOURCE : "https://github.com/bcggxx/AOSP-Clang-Mirror.git"
-  CLANG_BRANCH : "main"
+  CLANG_SOURCE : "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz"
+  CLANG_BRANCH : ""
 
   GCC_GNU : false
   GCC_64_SOURCE : ""
