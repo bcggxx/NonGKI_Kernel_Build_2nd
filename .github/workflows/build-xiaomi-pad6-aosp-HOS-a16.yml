@@ -15,8 +15,8 @@ env:
   KERNEL_SOURCE : "https://github.com/bcggxx/n0_kernel_pipa.git"
   KERNEL_BRANCH : "pipa-bpf"
 
-  CLANG_SOURCE : "https://github.com/bcggxx/AOSP-Clang-Mirror.git"
-  CLANG_BRANCH : "main"
+  CLANG_SOURCE : "https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6364210.git"
+  CLANG_BRANCH : "10.0"
 
   GCC_GNU : false
   GCC_64_SOURCE : ""
