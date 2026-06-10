@@ -6,7 +6,7 @@ on:
 
 env:
   # Device env
-  DEVICE_NAME : "Xiaomi Pad6"
+  DEVICE_NAME : "Xiaomi_Pad6"
   DEVICE_CODENAME : "pipa"
 
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
