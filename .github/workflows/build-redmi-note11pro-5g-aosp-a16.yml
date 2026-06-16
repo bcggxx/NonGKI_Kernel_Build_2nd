@@ -15,8 +15,8 @@ env:
   KERNEL_SOURCE : "https://github.com/dereference23/kernel_xiaomi_sm6375.git"
   KERNEL_BRANCH : "main"
 
-  CLANG_SOURCE : "https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.3/LLVM-21.1.3-Linux-X64.tar.xz"
-  CLANG_BRANCH : ""
+  CLANG_SOURCE : "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
+  CLANG_BRANCH : "lineage-20.0"
 
   GCC_GNU : false
   GCC_64_SOURCE : "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9.git"
@@ -119,10 +119,6 @@ jobs:
           # Only ${{ env.DEVICE_NAME }} use it.
           cd $GITHUB_WORKSPACE/device_kernel
 
-          # Enable ThinLTO
-
-          sed -i '/# CONFIG_THINLTO is not set/d' ./arch/${{ env.KERNEL_ARCH }}/configs/${{ env.DEFCONFIG_NAME }}
-
           # enable CONFIG_TMPFS_XATTR
 
           echo "CONFIG_TMPFS_XATTR=y" >> ./arch/${{ env.KERNEL_ARCH }}/configs/${{ env.DEFCONFIG_NAME }}
@@ -135,6 +131,13 @@ jobs:
 
       - name: 🔒 Patch Kernel of Baseband Guard
         uses: ./.github/workflows/patch-baseband-guard
+
+      - name: ❌ Set Swap
+        uses: thejerrybao/setup-swap-space@v1
+        with:
+            swap-space-path: /swapfile
+            swap-size-gb: 16
+            remove-existing-swap-files: true
 
       - name: 🚀 Build Process
         uses: ./.github/workflows/build-process
