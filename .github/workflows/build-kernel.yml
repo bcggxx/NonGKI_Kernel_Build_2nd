@@ -53,6 +53,20 @@ jobs:
     uses: ./.github/workflows/build-xiaomi-mipad4-lineageos22-a15.yml
     secrets: inherit
 
+  build-xiaomi-pad6-aosp-miui-a15:
+    name: "Xiaomi Pad 6 (AOSP & MIUI A15)"
+    strategy:
+      fail-fast: true
+    uses: ./.github/workflows/build-xiaomi-pad6-aosp-HOS-a15.yml
+    secrets: inherit
+
+  build-xiaomi-pad6-aosp-miui-a16:
+    name: "Xiaomi Pad 6 (AOSP & MIUI A16)"
+    strategy:
+      fail-fast: true
+    uses: ./.github/workflows/build-xiaomi-pad6-aosp-HOS-a16.yml
+    secrets: inherit
+
   ## Redmi
   build-redmi-k20pro-aosp-a15-sovietstaross:
     name: "Redmi K20 Pro (Soviet-Star-OSS)(Based-AOSP A15)"
