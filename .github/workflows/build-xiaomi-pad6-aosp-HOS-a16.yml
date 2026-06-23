@@ -90,7 +90,7 @@ env:
 
 jobs:
   build-kernel:
-    name: Build Xiaomi Pad6 Kernel
+    name: Build Xiaomi Pad6 Android16 Kernel
     runs-on: ubuntu-latest # u can changed to ubuntu 22.04, and need container set ubuntu-latest
     # container: archlinux/archlinux:latest # if u need use arch linux -> archlinux/archlinux:latest or ubuntu 20.04 -> ubuntu:focal
     env:
