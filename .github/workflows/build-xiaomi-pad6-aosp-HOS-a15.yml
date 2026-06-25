@@ -39,7 +39,7 @@ env:
   SUSFS_FIXED : true
 
   AK3_SOURCE : "https://github.com/bcggxx/AnyKernel3.git"
-  AK3_BRANCH : "master"
+  AK3_BRANCH : "n0-A15"
 
   BOOT_SOURCE : ""
 
