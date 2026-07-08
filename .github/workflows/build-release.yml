@@ -63,6 +63,8 @@ jobs:
         | Samsung A71 | a71 | 4.14 | Based AOSP & OneUI | 16 | AnyKernel3 | ReSukiSU | ✅ | ✅ | ✅ | ❌ |
         | Xiaomi Mi Pad 4 | clover | 4.19 | Lineage OS 22 | 15 | AnyKernel3 | ReSukiSU | ✅ | ❌ | ❌ | ❌ |
         | Redmi K30 Ultra | cezanne | 4.14 | Based AOSP | 14 | AnyKernel3 | ReSukiSU | ✅ | ✅ | ✅ | ❌ |
+        | Xiaomi Pad 6 | pipa | 4.19 | Based MIUI & AOSP | 15 | AnyKernel3 | ReSukiSU | ✅ | ✅| ❌ | ❌ |
+        | Xiaomi Pad 6 | pipa | 4.19 | Based MIUI & AOSP | 16 | AnyKernel3 | ReSukiSU | ✅ | ✅| ❌ | ❌ |
 
         - Specific device information: [Supported List](Supported_list.md).
         - The KernelSU version is for reference only. It is normal for the KernelSU version embedded in SUSFS to be lower.
@@ -70,11 +72,11 @@ jobs:
     steps:
       # Checkout the code
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       # Download Artifacts for A12 (Only if A12 Build is successful or input is true or empty)
       - name: Download Artifacts
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v8
         with:
           path: ./downloaded-artifacts
 

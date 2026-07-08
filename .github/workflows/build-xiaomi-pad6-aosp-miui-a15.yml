@@ -1,4 +1,4 @@
-name: Build Xiaomi Pad6 AOSP Hyperos Android 15 Kernel
+name: Build Xiaomi Pad6 AOSP MIUI Android 15 Kernel
 
 on:
   workflow_call:
@@ -46,7 +46,7 @@ env:
   NEED_DTBO : false
   NEED_SAFE_DTBO : false
 
-  ROM_TEXT : "AOSP_HyperOS"
+  ROM_TEXT : "AOSP_MIUI_A15"
 
   # Other env
   PYTHON_VERSION: "3" # Only 2(Ubuntu 22.04 and Ubuntu 20.04) or 3(Any OS Versions).
