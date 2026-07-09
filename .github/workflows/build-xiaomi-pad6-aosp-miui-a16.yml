@@ -43,7 +43,7 @@ env:
 
   BOOT_SOURCE : ""
 
-  NEED_DTBO : false
+  NEED_DTBO : true
   NEED_SAFE_DTBO : false
 
   ROM_TEXT : "AOSP_MIUI_A16"
@@ -63,7 +63,7 @@ env:
   SUSFS_PATCH_FIXED: "susfs_fixed_n0_pipa-bpf" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
 
   REKERNEL_ENABLE: "true" # if u need Re:Kernel.
-  DROIDSPACES_ENABLE: "false" # if u need Droidspaces or LXC/Docker.
+  DROIDSPACES_ENABLE: "true" # if u need Droidspaces or LXC/Docker.
 
   HOOK_METHOD: "syscall" # Manual hook method -> syscall.
 
@@ -77,7 +77,7 @@ env:
   BASEBAND_GUARD_ENABLE: "false" #if u want prevent unauthorized writes to critical partitions/device nodes.
   BASEBAND_GUARD_BOOT: "false" #if u want to protect boot partition.
 
-  GENERATE_DTB: "false" # if u kernel need DTB , but cannot auto generate it. (Only Anykernel3).
+  GENERATE_DTB: "true" # if u kernel need DTB , but cannot auto generate it. (Only Anykernel3).
   GENERATE_CHIP: "qcom" # only supported for qcom and mediatek.
 
   BUILD_DEBUGGER: "false" # Output build errors.
