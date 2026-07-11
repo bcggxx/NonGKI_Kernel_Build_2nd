@@ -129,6 +129,11 @@ jobs:
       - name: 🔒 Patch Kernel of Baseband Guard
         uses: ./.github/workflows/patch-baseband-guard
 
+      - name: 🏷️ Set Build User and Host
+        run: |
+          echo "KBUILD_BUILD_USER=github" >> $GITHUB_ENV
+          echo "KBUILD_BUILD_HOST=bcggxx" >> $GITHUB_ENV
+
       - name: 🚀 Build Process
         uses: ./.github/workflows/build-process
 
