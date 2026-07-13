@@ -1,4 +1,4 @@
-name: Build Xiaomi Pad6 AOSP MIUI Android 16 Kernel
+name: Build Xiaomi Pad6 AOSP MIUI Android 15 Kernel
 
 on:
   workflow_call:
@@ -12,8 +12,8 @@ env:
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-android-"
   EXTRA_CMDS : "ARCH=arm64 O=out CC=clang LLVM=1 LLVM_IAS=1 LD=ld.lld CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_COMPAT=arm-linux-androideabi- AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip"
 
-  KERNEL_SOURCE : "https://github.com/bcggxx/android_kernel_xiaomi_n0_pipa.git"
-  KERNEL_BRANCH : "pipa-bpf"
+  KERNEL_SOURCE : "https://github.com/bcggxx/android_kernel_xiaomi_pipa.git"
+  KERNEL_BRANCH : "pipa-t-oss"
 
   CLANG_SOURCE : "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz"
   CLANG_BRANCH : ""
@@ -36,17 +36,17 @@ env:
   KERNELSU_AUTO_FORK : "resukisu" # magic, rsuntk, next, resukisu and sukisu
 
   SUSFS_ENABLE : true
-  SUSFS_FIXED : true
+  SUSFS_FIXED : false
 
   AK3_SOURCE : "https://github.com/bcggxx/AnyKernel3.git"
-  AK3_BRANCH : "n0-A16"
+  AK3_BRANCH : "n0-A15"
 
   BOOT_SOURCE : ""
 
   NEED_DTBO : true
   NEED_SAFE_DTBO : false
 
-  ROM_TEXT : "AOSP_MIUI_A16"
+  ROM_TEXT : "MIUI_A14"
 
   # Other env
   PYTHON_VERSION: "3" # Only 2(Ubuntu 22.04 and Ubuntu 20.04) or 3(Any OS Versions).
@@ -60,7 +60,7 @@ env:
   PATCHES_BRANCH: "main" # [your_branch] -> main
 
   SUSFS_FOLDER_FIXED: "" # Fill in your patch prefix directory here. Leave it blank if there isn't one. -> your_folder
-  SUSFS_PATCH_FIXED: "susfs_fixed_n0_pipa-bpf" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
+  SUSFS_PATCH_FIXED: "" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
 
   REKERNEL_ENABLE: "true" # if u need Re:Kernel.
   DROIDSPACES_ENABLE: "true" # if u need Droidspaces or LXC/Docker.
@@ -90,7 +90,7 @@ env:
 
 jobs:
   build-kernel:
-    name: Build Xiaomi Pad6 Android16 Kernel
+    name: Build Xiaomi Pad6 Android14 Kernel
     runs-on: ubuntu-latest # u can changed to ubuntu 22.04, and need container set ubuntu-latest
     # container: archlinux/archlinux:latest # if u need use arch linux -> archlinux/archlinux:latest or ubuntu 20.04 -> ubuntu:focal
     env:
