@@ -65,7 +65,6 @@ jobs:
         | Redmi K30 Ultra | cezanne | 4.14 | Based AOSP | 14 | AnyKernel3 | ReSukiSU | ✅ | ✅ | ✅ |
         | Xiaomi Pad 6 | pipa | 4.19 | Based MIUI & AOSP | 15 | AnyKernel3 | ReSukiSU | ✅ | ✅| ❌ |
         | Xiaomi Pad 6 | pipa | 4.19 | Based MIUI & AOSP | 16 | AnyKernel3 | ReSukiSU | ✅ | ✅| ❌ |
-        | Xiaomi Pad 6 | pipa | 4.19 | Based MIUI | 14 | AnyKernel3 | ReSukiSU | ✅ | ✅| ❌ |
 
         - Specific device information: [Supported List](Supported_list.md).
         - The KernelSU version is for reference only. It is normal for the KernelSU version embedded in SUSFS to be lower.
