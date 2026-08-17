@@ -10,7 +10,7 @@ env:
   DEVICE_CODENAME : "pipa"
 
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-android-"
-  EXTRA_CMDS : "ARCH=arm64 O=out CC=clang LLVM=1 LLVM_IAS=1 LD=ld.lld CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_COMPAT=arm-linux-androideabi- AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip"
+  EXTRA_CMDS : "ARCH=arm64 O=out CC=clang LLVM=1 LLVM_IAS=1 LD=ld.lld CROSS_COMPILE=aarch64-linux-android- AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip"
 
   KERNEL_SOURCE : "https://github.com/bcggxx/android_kernel_xiaomi_n0_pipa.git"
   KERNEL_BRANCH : "n0-A15"
