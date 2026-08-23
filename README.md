@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbcggxx%2FNonGKI_Kernel_Build_2nd.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbcggxx%2FNonGKI_Kernel_Build_2nd?ref=badge_shield)
+
 <h2 align="center">Non-GKI Kernel Build</h2>
 
 <p align="center">
@@ -12,6 +14,9 @@
 > [!NOTE]
 > **Version 2.0**  
 > **Get Sample：[sample](https://github.com/JackA1ltman/NonGKI_Kernel_Build_2nd/tree/sample)**  
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbcggxx%2FNonGKI_Kernel_Build_2nd.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbcggxx%2FNonGKI_Kernel_Build_2nd?ref=badge_large)
 
 ### Introduction
 
