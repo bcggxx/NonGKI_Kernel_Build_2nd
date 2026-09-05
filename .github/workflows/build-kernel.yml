@@ -61,10 +61,10 @@ jobs:
     secrets: inherit
 
   build-Xiaomi-Pad6-aosp-miui-a16:
-    name: "Xiaomi Pad 6 (AOSP & MIUI A16)"
+    name: "Xiaomi Pad 6 (AOSP & HyperOS A16)"
     strategy:
       fail-fast: true
-    uses: ./.github/workflows/build-xiaomi-pad6-aosp-miui-a16.yml
+    uses: ./.github/workflows/build-xiaomi-pad6-aosp-hyperos-a16.yml
     secrets: inherit
 
   ## Redmi
