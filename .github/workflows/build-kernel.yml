@@ -74,13 +74,6 @@ jobs:
     uses: ./.github/workflows/build-xiaomi-pad6-aosp-miui-a15-test.yml
     secrets: inherit
 
-  build-Xiaomi-Pad6-aosp-hyperos-a16-test:
-    name: "Xiaomi Pad 6 (AOSP & HyperOS A16) TEST !!!"
-    strategy:
-      fail-fast: true
-    uses: ./.github/workflows/build-xiaomi-pad6-aosp-hyperos-a16-test.yml
-    secrets: inherit
-
   build-Xiaomi-Pad6-aosp-hyperos-a16-17:
     name: "Xiaomi Pad 6 (AOSP & HyperOS A16/17)"
     strategy:
