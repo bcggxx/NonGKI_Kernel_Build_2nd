@@ -67,27 +67,6 @@ jobs:
     uses: ./.github/workflows/build-xiaomi-pad6-aosp-hyperos-a16.yml
     secrets: inherit
 
-  build-Xiaomi-Pad6-aosp-miui-a15-test:
-    name: "Xiaomi Pad 6 (AOSP & MIUI A15) TEST !!!"
-    strategy:
-      fail-fast: true
-    uses: ./.github/workflows/build-xiaomi-pad6-aosp-miui-a15-test.yml
-    secrets: inherit
-
-  build-Xiaomi-Pad6-aosp-hyperos-a16-17:
-    name: "Xiaomi Pad 6 (AOSP & HyperOS A16/17)"
-    strategy:
-      fail-fast: true
-    uses: ./.github/workflows/build-xiaomi-pad6-aosp-hyperos-a16-17.yml
-    secrets: inherit
-
-  build-Xiaomi-Pad6-aosp-hyperos-a16-17-test:
-    name: "Xiaomi Pad 6 (AOSP & HyperOS A16/17) TEST !!!"
-    strategy:
-      fail-fast: true
-    uses: ./.github/workflows/build-xiaomi-pad6-aosp-hyperos-a16-17-test.yml
-    secrets: inherit
-
   ## Redmi
   build-redmi-k20pro-aosp-a15-sovietstaross:
     name: "Redmi K20 Pro (Soviet-Star-OSS)(Based-AOSP A15)"
