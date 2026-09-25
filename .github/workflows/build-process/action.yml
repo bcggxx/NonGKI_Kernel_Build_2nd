@@ -9,7 +9,13 @@ runs:
         run: |
           # Get MKDTBO tool to kernel
           cd $GITHUB_WORKSPACE/device_kernel/scripts/dtc
-          ${{ env.CURLX }} https://android.googlesource.com/platform/system/libufdt/+archive/refs/heads/main/utils/src.tar.gz src.tar.gz
+          for i in 1 2 3 4 5; do
+            rm -f src.tar.gz
+            ${{ env.CURLX }} https://android.googlesource.com/platform/system/libufdt/+archive/refs/heads/main/utils/src.tar.gz src.tar.gz
+            tar tzf src.tar.gz > /dev/null 2>&1 && break
+            echo "[-] Got invalid src.tar.gz, retrying ($i/5)..."
+            sleep $(( i * 5 ))
+          done
           tar zxvf src.tar.gz
           rm -f src.tar.gz
 
@@ -219,7 +225,13 @@ runs:
           cd $GITHUB_WORKSPACE/device_kernel
           mkdir dtbo_tool
           cd dtbo_tool
-          ${{ env.CURLX }} https://android.googlesource.com/platform/system/libufdt/+archive/master/utils.tar.gz mkdtboimg.tar.gz
+          for i in 1 2 3 4 5; do
+            rm -f mkdtboimg.tar.gz
+            ${{ env.CURLX }} https://android.googlesource.com/platform/system/libufdt/+archive/master/utils.tar.gz mkdtboimg.tar.gz
+            tar tzf mkdtboimg.tar.gz > /dev/null 2>&1 && break
+            echo "[-] Got invalid mkdtboimg.tar.gz, retrying ($i/5)..."
+            sleep $(( i * 5 ))
+          done
           tar zxvf mkdtboimg.tar.gz
           cd ../
           if [ -d "$GITHUB_WORKSPACE/device_kernel/out/arch/"${{ env.KERNEL_ARCH }}"/boot/dts/vendor" ]; then
